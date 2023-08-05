@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Add a slight delay before sliding in (you can adjust this value)
     setTimeout(() => {
         slideContainer.style.transform = "translateX(-2%)";
-    },500); // Adjust the time as needed
+    },0); // Adjust the time as needed
 });
 
 
