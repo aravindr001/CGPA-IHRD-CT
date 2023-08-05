@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // Wait for the animation to complete, then redirect to the destination page
             setTimeout(() => {
                 window.location.href = link.href;
-            }, 1000); // Adjust the time as needed
+            }, 2000); // Adjust the time as needed
         });
     });
 });
