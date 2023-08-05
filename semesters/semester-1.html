@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="icon" href="../images/logo.png">
+
+    <title>CGPI Calculator</title>
+    <style>
+        .input-group-text{
+            width: 190px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+
+            <h1 class="p-3">CGPI Calculator <span class="badge bg-secondary">CT1</span></h1>
+            <form class="p-4" action="">
+                <div class="input-group mb-3">
+
+                    <label class="input-group-text" for="inputGroupSelect02">English</label>
+
+                    <select class="form-select" id="English">
+                        <option selected>Choose...</option>
+                        <option value="10">S</option>
+                        <option value="9">A</option>
+                        <option value="8">B</option>
+                        <option value="7">C</option>
+                        <option value="6">D</option>
+                        <option value="5">E</option>
+                        <option value="4">F</option>
+                    </select>
+                </div>
+
+                <div class="input-group mb-3">
+
+                    <label class="input-group-text" for="inputGroupSelect02">Mathematics I</label>
+
+                    <select class="form-select" id="MathematicsI">
+                        <option selected>Choose...</option>
+                        <option value="10">S</option>
+                        <option value="9">A</option>
+                        <option value="8">B</option>
+                        <option value="7">C</option>
+                        <option value="6">D</option>
+                        <option value="5">E</option>
+                        <option value="4">F</option>
+                    </select>
+                </div>
+
+                <div class="input-group mb-3">
+
+                    <label class="input-group-text" for="inputGroupSelect02">Physics I</label>
+
+                    <select class="form-select" id="PhysicsI">
+                        <option selected>Choose...</option>
+                        <option value="10">S</option>
+                        <option value="9">A</option>
+                        <option value="8">B</option>
+                        <option value="7">C</option>
+                        <option value="6">D</option>
+                        <option value="5">E</option>
+                        <option value="4">F</option>
+                    </select>
+                </div>
+
+                <div class="input-group mb-3">
+
+                    <label class="input-group-text" for="inputGroupSelect02">Chemistry</label>
+
+                    <select class="form-select" id="Chemistry">
+                        <option selected>Choose...</option>
+                        <option value="10">S</option>
+                        <option value="9">A</option>
+                        <option value="8">B</option>
+                        <option value="7">C</option>
+                        <option value="6">D</option>
+                        <option value="5">E</option>
+                        <option value="4">F</option>
+                    </select>
+                </div>
+
+                <div class="input-group mb-3">
+
+                    <label class="input-group-text" for="inputGroupSelect02">Engineering Graphics</label>
+
+                    <select class="form-select" id="EngineeringGraphics">
+                        <option selected>Choose...</option>
+                        <option value="10">S</option>
+                        <option value="9">A</option>
+                        <option value="8">B</option>
+                        <option value="7">C</option>
+                        <option value="6">D</option>
+                        <option value="5">E</option>
+                        <option value="4">F</option>
+                    </select>
+                </div>
+
+
+                <div class="input-group mb-3">
+
+                    <label class="input-group-text" for="inputGroupSelect02">Chemistry Lab</label>
+
+                    <select class="form-select" id="ChemistryLab">
+                        <option selected>Choose...</option>
+                        <option value="10">S</option>
+                        <option value="9">A</option>
+                        <option value="8">B</option>
+                        <option value="7">C</option>
+                        <option value="6">D</option>
+                        <option value="5">E</option>
+                        <option value="4">F</option>
+                    </select>
+                </div>
+
+                <div class="input-group mb-3">
+
+                    <label class="input-group-text" for="inputGroupSelect02">IT systems Lab</label>
+
+                    <select class="form-select" id="ITsystemsLab">
+                        <option selected>Choose...</option>
+                        <option value="10">S</option>
+                        <option value="9">A</option>
+                        <option value="8">B</option>
+                        <option value="7">C</option>
+                        <option value="6">D</option>
+                        <option value="5">E</option>
+                        <option value="4">F</option>
+                    </select>
+                </div>
+
+                <div class="input-group mb-3">
+
+                    <label class="input-group-text" for="inputGroupSelect02">Sports and Yoga</label>
+
+                    <select class="form-select" id="SportsandYoga">
+                        <option selected>Choose...</option>
+                        <option value="10">S</option>
+                        <option value="9">A</option>
+                        <option value="8">B</option>
+                        <option value="7">C</option>
+                        <option value="6">D</option>
+                        <option value="5">E</option>
+                        <option value="4">F</option>
+                    </select>
+                </div>
+
+                <div class="d-flex flex-row justify-content-between">
+                    <button type="reset" class="btn btn-primary">Reset</button>
+                    <button type="button" class="btn btn-primary" onclick="showCgpa()">Submit</button>
+                </div>
+            </form>
+
+
+            <div class="row justify-content-center mt-5">
+                <h1 class="row" id="result" style="display:flex; justify-content: center; text-align: center;">
+                    <span class="h6 text-muted">press submit to get the
+                        result</span></h1>
+            </div>
+
+        </div>
+
+        <div class="container">
+            <footer class="border-top">
+                <span class="row text-muted justify-content-center mt-5 mb-1">Aravind R</span>
+                <span class="row text-muted justify-content-center mb-4">aravindr2978@gmail.com</span>
+            </footer>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+
+    <script>
+        function showCgpa() {
+
+            var credit_English = 4;
+            var credit_MathematicsI = 5;
+            var credit_PhysicsI = 3;
+            var credit_Chemistry = 3;
+            var credit_EngineeringGraphics = 1.5;
+            var credit_ChemistryLab = 1;
+            var credit_ITsystemsLab = 2;
+            var credit_SportsandYoga = 1;
+
+
+            var English = parseFloat(document.getElementById("English").value) * credit_English;
+            var MathematicsI = parseFloat(document.getElementById("MathematicsI").value) * credit_MathematicsI;
+            var PhysicsI = parseFloat(document.getElementById("PhysicsI").value) * credit_PhysicsI;
+            var Chemistry = parseFloat(document.getElementById("Chemistry").value) * credit_Chemistry;
+            var EngineeringGraphics = parseFloat(document.getElementById("EngineeringGraphics").value) * credit_EngineeringGraphics;
+            var ChemistryLab = parseFloat(document.getElementById("ChemistryLab").value) * credit_ChemistryLab;
+            var ITsystemsLab = parseFloat(document.getElementById("ITsystemsLab").value) * credit_ITsystemsLab;
+            var SportsandYoga = parseFloat(document.getElementById("SportsandYoga").value) * credit_SportsandYoga;
+
+
+            var numerator = English + MathematicsI + PhysicsI + Chemistry + EngineeringGraphics + ChemistryLab + ITsystemsLab + SportsandYoga;
+            var cgpa = numerator / 20.5;
+            // console.log(cgpa);
+
+            var resultDiv = document.getElementById("result");
+
+            // Update the content of the result div
+            if (isNaN(cgpa)) {
+                resultDiv.textContent = "ALL SELECTIONS SHOULD BE FILLED!!"
+            } else {
+                resultDiv.textContent = "CGPA = " + cgpa;
+            }
+
+
+
+        }
+    </script>
+</body>
+
+</html>
