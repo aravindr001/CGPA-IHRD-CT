@@ -21,13 +21,13 @@
     <div class="container-fluid">
         <div class="row">
 
-            <h1 class="p-3">CGPI Calculator <span class="badge bg-secondary">CT1</span></h1>
+            <h1 class="p-3">CGPI Calculator <span class="badge bg-secondary">CT2</span></h1>
             <form class="p-4" action="">
                 <div class="input-group mb-3">
 
-                    <label class="input-group-text" for="inputGroupSelect02">English</label>
+                    <label class="input-group-text" for="inputGroupSelect02">Mathematics II</label>
 
-                    <select class="form-select" id="English">
+                    <select class="form-select" id="MathematicsII">
                         <option selected>Choose...</option>
                         <option value="10">S</option>
                         <option value="9">A</option>
@@ -41,9 +41,9 @@
 
                 <div class="input-group mb-3">
 
-                    <label class="input-group-text" for="inputGroupSelect02">Mathematics I</label>
+                    <label class="input-group-text" for="inputGroupSelect02">Physics II</label>
 
-                    <select class="form-select" id="MathematicsI">
+                    <select class="form-select" id="PhysicsII">
                         <option selected>Choose...</option>
                         <option value="10">S</option>
                         <option value="9">A</option>
@@ -57,9 +57,9 @@
 
                 <div class="input-group mb-3">
 
-                    <label class="input-group-text" for="inputGroupSelect02">Physics I</label>
+                    <label class="input-group-text" for="inputGroupSelect02">Electrical & Electronics</label>
 
-                    <select class="form-select" id="PhysicsI">
+                    <select class="form-select" id="ElectricalElectronics">
                         <option selected>Choose...</option>
                         <option value="10">S</option>
                         <option value="9">A</option>
@@ -73,9 +73,9 @@
 
                 <div class="input-group mb-3">
 
-                    <label class="input-group-text" for="inputGroupSelect02">Chemistry</label>
+                    <label class="input-group-text" for="inputGroupSelect02">PSP</label>
 
-                    <select class="form-select" id="Chemistry">
+                    <select class="form-select" id="PSP">
                         <option selected>Choose...</option>
                         <option value="10">S</option>
                         <option value="9">A</option>
@@ -89,9 +89,9 @@
 
                 <div class="input-group mb-3">
 
-                    <label class="input-group-text" for="inputGroupSelect02">Engineering Graphics</label>
+                    <label class="input-group-text" for="inputGroupSelect02">English Lab</label>
 
-                    <select class="form-select" id="EngineeringGraphics">
+                    <select class="form-select" id="EngLab">
                         <option selected>Choose...</option>
                         <option value="10">S</option>
                         <option value="9">A</option>
@@ -106,9 +106,9 @@
 
                 <div class="input-group mb-3">
 
-                    <label class="input-group-text" for="inputGroupSelect02">Chemistry Lab</label>
+                    <label class="input-group-text" for="inputGroupSelect02">Physics Lab</label>
 
-                    <select class="form-select" id="ChemistryLab">
+                    <select class="form-select" id="PhyLab">
                         <option selected>Choose...</option>
                         <option value="10">S</option>
                         <option value="9">A</option>
@@ -122,9 +122,9 @@
 
                 <div class="input-group mb-3">
 
-                    <label class="input-group-text" for="inputGroupSelect02">IT systems Lab</label>
+                    <label class="input-group-text" for="inputGroupSelect02">Engineering Workshop</label>
 
-                    <select class="form-select" id="ITsystemsLab">
+                    <select class="form-select" id="workshop">
                         <option selected>Choose...</option>
                         <option value="10">S</option>
                         <option value="9">A</option>
@@ -136,21 +136,7 @@
                     </select>
                 </div>
 
-                <div class="input-group mb-3">
-
-                    <label class="input-group-text" for="inputGroupSelect02">Sports and Yoga</label>
-
-                    <select class="form-select" id="SportsandYoga">
-                        <option selected>Choose...</option>
-                        <option value="10">S</option>
-                        <option value="9">A</option>
-                        <option value="8">B</option>
-                        <option value="7">C</option>
-                        <option value="6">D</option>
-                        <option value="5">E</option>
-                        <option value="4">F</option>
-                    </select>
-                </div>
+                
 
                 <div class="d-flex flex-row justify-content-between">
                     <button type="reset" class="btn btn-primary">Reset</button>
@@ -183,28 +169,26 @@
     <script>
         function showCgpa() {
 
-            var credit_English = 4;
-            var credit_MathematicsI = 5;
-            var credit_PhysicsI = 3;
-            var credit_Chemistry = 3;
-            var credit_EngineeringGraphics = 1.5;
-            var credit_ChemistryLab = 1;
-            var credit_ITsystemsLab = 2;
-            var credit_SportsandYoga = 1;
+            var credit_MathematicsII = 4;
+            var credit_PhysicsII = 3;
+            var credit_ElectricalElectronics = 3;
+            var credit_PSP = 3;
+            var credit_EngLab = 1.5;
+            var credit_PhyLab = 1;
+            var credit_workshop = 1.5;
+
+            var English = parseFloat(document.getElementById("MathematicsII").value) * credit_MathematicsII;
+            var MathematicsI = parseFloat(document.getElementById("PhysicsII").value) * credit_PhysicsII;
+            var ElectricalElectronics = parseFloat(document.getElementById("ElectricalElectronics").value) * credit_ElectricalElectronics;
+            var Psp = parseFloat(document.getElementById("PSP").value) * credit_PSP;
+            var EngLab = parseFloat(document.getElementById("EngineeringGraphics").value) * credit_EngLab;
+            var PhyLab = parseFloat(document.getElementById("ChemistryLab").value) * credit_PhyLab;
+            var credit_workshop = parseFloat(document.getElementById("ITsystemsLab").value) * credit_workshop;
 
 
-            var English = parseFloat(document.getElementById("English").value) * credit_English;
-            var MathematicsI = parseFloat(document.getElementById("MathematicsI").value) * credit_MathematicsI;
-            var PhysicsI = parseFloat(document.getElementById("PhysicsI").value) * credit_PhysicsI;
-            var Chemistry = parseFloat(document.getElementById("Chemistry").value) * credit_Chemistry;
-            var EngineeringGraphics = parseFloat(document.getElementById("EngineeringGraphics").value) * credit_EngineeringGraphics;
-            var ChemistryLab = parseFloat(document.getElementById("ChemistryLab").value) * credit_ChemistryLab;
-            var ITsystemsLab = parseFloat(document.getElementById("ITsystemsLab").value) * credit_ITsystemsLab;
-            var SportsandYoga = parseFloat(document.getElementById("SportsandYoga").value) * credit_SportsandYoga;
 
-
-            var numerator = English + MathematicsI + PhysicsI + Chemistry + EngineeringGraphics + ChemistryLab + ITsystemsLab + SportsandYoga;
-            var cgpa = numerator / 20.5;
+            var numerator = English + MathematicsI + ElectricalElectronics + Psp + EngLab + PhyLab + credit_workshop;
+            var cgpa = numerator / 17;
             // console.log(cgpa);
 
             var resultDiv = document.getElementById("result");
