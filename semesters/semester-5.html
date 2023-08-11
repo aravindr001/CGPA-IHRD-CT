@@ -23,7 +23,7 @@
     <div class="container-fluid">
         <div class="row">
 
-            <h1 class="p-3">CGPI Calculator <span class="badge bg-secondary">CT4</span></h1>
+            <h1 class="p-3">CGPI Calculator <span class="badge bg-secondary">CT5</span></h1>
 
 
             <form class="p-4" action="">
@@ -130,8 +130,8 @@
 
                     <select class="form-select" id="Seminar">
                         <option selected >Choose...</option>
-                        <option value="10">Done</option>
-                        <option value="-1">Undone</option>
+                        <option value="10">Yes</option>
+                        <option value="-1">No</option>
                     </select> 
 
 
@@ -170,29 +170,29 @@
     <script>
         function showCgpa() {
 
-            var credit_oops = 4;
-            var credit_ccn = 3;
-            var credit_ds = 4;
-            var credit_labOops = 1.5;
-            var credit_labWeb = 2.5;
-            var credit_labDs = 1.5;
-            var credit_minorProject = 2;
+            var credit_es = 4;
+            var credit_os = 4;
+            var credit_ec = 4;
+            var credit_labEs = 1.5;
+            var credit_labSa = 1.5;
+            var credit_labElective = 1.5;
+            var credit_seminar = 1;
 
-            var oops = parseFloat(document.getElementById("OOPS").value) * credit_oops;
-            var ccn = parseFloat(document.getElementById("CCN").value) * credit_ccn;
-            var ds = parseFloat(document.getElementById("DS").value) * credit_ds;
-            var labOops = parseFloat(document.getElementById("OOPS_LAB").value) * credit_labOops;
-            var labWeb = parseFloat(document.getElementById("WEB_LAB").value) * credit_labWeb;
-            var labDs = parseFloat(document.getElementById("DS_LAB").value) * credit_labDs;
-            var minorProject = parseFloat(document.getElementById("Minor_Project").value) * credit_minorProject;
+            var es = parseFloat(document.getElementById("ES").value) * credit_es;
+            var os = parseFloat(document.getElementById("OS").value) * credit_os;
+            var ec = parseFloat(document.getElementById("EC").value) * credit_ec;
+            var labes = parseFloat(document.getElementById("ES_LAB").value) * credit_labEs;
+            var labSa = parseFloat(document.getElementById("SA_LAB").value) * credit_labSa;
+            var labelective = parseFloat(document.getElementById("ELECTIVE_LAB").value) * credit_labElective;
+            var seminar = parseFloat(document.getElementById("Seminar").value) * credit_seminar;
 
-            if (minorProject == -2) {
+            if (seminar == -2) {
                 alert("Should present a seminar");
             }
 
 
-            var numerator = oops + ccn + ds + labOops + labWeb + labDs + minorProject;
-            var cgpa = numerator / 18.5;
+            var numerator = es + os + ec + labes + labSa + labelective + seminar;
+            var cgpa = numerator / 17.5;
             var resultDiv = document.getElementById("result");
 
             // Update the content of the result div
